@@ -15,7 +15,7 @@ const proyectos = [
       'Aplicación para administrar contactos mediante operaciones CRUD y estructuras de datos en Java.',
     tecnologias: ['Java', 'CRUD', 'POO'],
     enlace:
-      'https://github.com/pepe907/Proyectos_java/tree/main/src/Contacto',
+      'https://github.com/pepe907/Contactos-Java',
   },
   {
     nombre: 'Cuenta Bancaria',
