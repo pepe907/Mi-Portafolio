@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 
 const proyectos = [
@@ -44,13 +45,14 @@ const proyectos = [
 ]
 
 function App() {
+  const [mostrarAviso, setMostrarAviso] = useState(false)
+
   return (
     <div className="portafolio">
       <header className="navbar">
         <a href="#inicio" className="logo">
           Agustín
         </a>
-
         <nav>
           <a href="#inicio">Inicio</a>
           <a href="#sobre-mi">Sobre mí</a>
@@ -60,20 +62,18 @@ function App() {
         </nav>
       </header>
 
+
       <main>
         <section id="inicio" className="presentacion">
           <p className="saludo">
             Hola, soy
           </p>
-
           <h1>
             Agustín Enrique Cabezas Yanguma
           </h1>
-
           <h2>
             Estudiante de Análisis y Desarrollo de Software
           </h2>
-
           <p className="descripcion">
             En formación en desarrollo backend, con conocimientos en
             Java, Spring Boot, SQL, PostgreSQL y desarrollo de
@@ -112,10 +112,8 @@ function App() {
           id="sobre-mi"
           className="seccion sobre-mi"
         >
-
           <div className="titulo-seccion">
             <span>01</span>
-
             <h2>
               Sobre mí
             </h2>
@@ -128,38 +126,31 @@ function App() {
                 con formación en programación y enfoque en desarrollo
                 backend.
               </p>
-
               <p>
                 Actualmente estoy fortaleciendo mis conocimientos en
                 Java, Spring Boot, SQL y desarrollo de aplicaciones
                 web.
               </p>
-
               <p>
                 Me interesa seguir desarrollando proyectos prácticos
                 que me permitan mejorar mis habilidades y adquirir
                 experiencia en el desarrollo de software.
               </p>
-
             </div>
 
             <div className="sobre-mi-datos">
-
               <div>
                 <strong>Enfoque</strong>
                 <span>Backend</span>
               </div>
-
               <div>
                 <strong>Lenguaje principal</strong>
                 <span>Java</span>
               </div>
-
               <div>
                 <strong>Base de datos</strong>
                 <span>PostgreSQL</span>
               </div>
-
               <div>
                 <strong>Formación</strong>
                 <span>SENA - ADSO</span>
@@ -174,7 +165,6 @@ function App() {
         >
           <div className="titulo-seccion">
             <span>02</span>
-
             <h2>
               Tecnologías
             </h2>
@@ -185,11 +175,9 @@ function App() {
               <div className="tecnologia-numero">
                 01
               </div>
-
               <h3>
                 Java
               </h3>
-
               <p>
                 Programación orientada a objetos, estructuras de datos
                 y desarrollo de aplicaciones.
@@ -200,11 +188,9 @@ function App() {
               <div className="tecnologia-numero">
                 02
               </div>
-
               <h3>
                 Spring Boot
               </h3>
-
               <p>
                 Desarrollo de aplicaciones backend y APIs REST.
               </p>
@@ -214,11 +200,9 @@ function App() {
               <div className="tecnologia-numero">
                 03
               </div>
-
               <h3>
                 PostgreSQL
               </h3>
-
               <p>
                 Diseño, relaciones, consultas y manejo de bases de
                 datos relacionales.
@@ -229,11 +213,9 @@ function App() {
               <div className="tecnologia-numero">
                 04
               </div>
-
               <h3>
                 React
               </h3>
-
               <p>
                 Desarrollo de interfaces web mediante componentes.
               </p>
@@ -243,11 +225,9 @@ function App() {
               <div className="tecnologia-numero">
                 05
               </div>
-
               <h3>
                 Git & GitHub
               </h3>
-
               <p>
                 Control de versiones y administración de proyectos.
               </p>
@@ -257,11 +237,9 @@ function App() {
               <div className="tecnologia-numero">
                 06
               </div>
-
               <h3>
                 SQL
               </h3>
-
               <p>
                 Consultas, relaciones y operaciones sobre bases de
                 datos.
@@ -275,13 +253,10 @@ function App() {
           className="seccion proyectos"
         >
           <div className="titulo-seccion">
-
             <span>03</span>
-
             <h2>
               Proyectos
             </h2>
-
           </div>
 
           <p className="introduccion-proyectos">
@@ -295,11 +270,9 @@ function App() {
                 <span className="visual-etiqueta">
                   Proyecto principal
                 </span>
-
                 <h3>
                   Natymoon
                 </h3>
-
                 <p>
                   Ecommerce
                 </p>
@@ -310,16 +283,13 @@ function App() {
               <span className="proyecto-numero">
                 01 / PROYECTO PRINCIPAL
               </span>
-
               <h3>
                 Natymoon
               </h3>
-
               <p>
                 Proyecto de comercio electrónico desarrollado como
                 aplicación web para la gestión y venta de productos.
               </p>
-
               <p>
                 El proyecto integra un backend desarrollado con
                 Spring Boot, una base de datos PostgreSQL y un
@@ -334,15 +304,13 @@ function App() {
               </div>
 
               <div className="botones-proyecto">
-                <a
-                  href="https://github.com/pepe907"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => setMostrarAviso(true)}
                   className="boton-proyecto boton-proyecto-principal"
                 >
                   Ver código
-                </a>
-
+                </button>
                 <a
                   href="#contacto"
                   className="boton-proyecto boton-proyecto-secundario"
@@ -359,15 +327,12 @@ function App() {
                 className="proyecto-card"
                 key={proyecto.nombre}
               >
-
                 <div className="proyecto-card-numero">
                   {String(index + 2).padStart(2, '0')}
                 </div>
-
                 <h3>
                   {proyecto.nombre}
                 </h3>
-
                 <p>
                   {proyecto.descripcion}
                 </p>
@@ -380,7 +345,6 @@ function App() {
                     </span>
 
                   ))}
-
                 </div>
 
                 <a
@@ -391,38 +355,30 @@ function App() {
                 >
                   Ver código →
                 </a>
-
               </article>
-
             ))}
           </div>
         </section>
 
         <section className="seccion cv">
           <div className="titulo-seccion">
-
             <span>04</span>
-
             <h2>
               Curriculum Vitae
             </h2>
-
           </div>
 
           <div className="cv-contenido">
             <div>
-
               <h3>
                 Mi hoja de vida
               </h3>
-
               <p>
                 Consulta mi formación académica, conocimientos,
                 proyectos y certificaciones.
               </p>
 
             </div>
-
             <a
               href="/CV-Agustin-Cabezas.pdf"
               target="_blank"
@@ -431,30 +387,24 @@ function App() {
             >
               Ver CV
             </a>
-
           </div>
-
         </section>
 
         <section
           id="contacto"
           className="contacto"
         >
-
           <span className="contacto-numero">
             05
           </span>
-
           <h2>
             ¿Quieres conocer mis proyectos?
           </h2>
-
           <p>
             Puedes encontrar mi código y proyectos en GitHub.
           </p>
 
           <div className="contacto-botones">
-
             <a
               href="https://github.com/pepe907"
               target="_blank"
@@ -476,10 +426,65 @@ function App() {
         </section>
       </main>
 
+      {mostrarAviso && (
+        <div
+          className="notificacion-overlay"
+          onClick={() => setMostrarAviso(false)}
+        >
+          <div
+            className="notificacion"
+            onClick={(evento) => evento.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="notificacion-cerrar"
+              onClick={() => setMostrarAviso(false)}
+              aria-label="Cerrar notificación"
+            >
+              ×
+            </button>
+
+            <div className="notificacion-icono">
+              🔒
+            </div>
+
+            <span className="notificacion-etiqueta">
+              Natymoon
+            </span>
+
+            <h3>
+              Código temporalmente no disponible
+            </h3>
+
+            <p>
+              Este proyecto se encuentra actualmente en desarrollo
+              y preparación para su presentación.
+            </p>
+
+            <p>
+              El código fuente estará disponible próximamente.
+            </p>
+
+            <button
+              type="button"
+              className="boton boton-principal notificacion-boton"
+              onClick={() => setMostrarAviso(false)}
+            >
+              Entendido
+            </button>
+
+          </div>
+
+        </div>
+
+      )}
+
       <footer>
+
         <p>
           © 2026 Agustín Enrique Cabezas Yanguma
         </p>
+
         <a
           href="https://github.com/pepe907"
           target="_blank"
