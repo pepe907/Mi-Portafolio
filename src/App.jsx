@@ -3,14 +3,6 @@ import './App.css'
 
 const proyectos = [
   {
-    nombre: 'Sistema de Biblioteca',
-    descripcion:
-      'Aplicación desarrollada en Java para gestionar libros, préstamos y devoluciones mediante programación orientada a objetos.',
-    tecnologias: ['Java', 'POO', 'ArrayList'],
-    enlace:
-      'https://github.com/pepe907/Proyectos_java/tree/main/src/Biblioteca',
-  },
-  {
     nombre: 'Gestor-de-Biblioteca',
     descripcion:
       'Aplicación para administrar libros mediante operaciones CRUD y estructuras de datos en Spring boot y postgreSQL',
