@@ -11,12 +11,12 @@ const proyectos = [
       'https://github.com/pepe907/Proyectos_java/tree/main/src/Biblioteca',
   },
   {
-    nombre: 'Sistema de Contactos',
+    nombre: 'Gestor-de-Biblioteca',
     descripcion:
-      'Aplicación para administrar contactos mediante operaciones CRUD y estructuras de datos en Java.',
-    tecnologias: ['Java', 'CRUD', 'POO'],
+      'Aplicación para administrar libros mediante operaciones CRUD y estructuras de datos en Spring boot y postgreSQL',
+    tecnologias: ['Spring boot', 'PostgreSQL'],
     enlace:
-      'https://github.com/pepe907/Contactos-Java',
+      'https://github.com/pepe907/Gestor-de-biblioteca/tree/main/src/main/java/com/Gestor_biblioteca/biblioteca',
   },
   {
     nombre: 'Cuenta Bancaria',
