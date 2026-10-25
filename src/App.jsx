@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 
 const proyectos = [
@@ -37,8 +36,6 @@ const proyectos = [
 ]
 
 function App() {
-  const [mostrarAviso, setMostrarAviso] = useState(false)
-
   return (
     <div className="portafolio">
       <header className="navbar">
@@ -53,7 +50,6 @@ function App() {
           <a href="#contacto">Contacto</a>
         </nav>
       </header>
-
 
       <main>
         <section id="inicio" className="presentacion">
@@ -296,13 +292,14 @@ function App() {
               </div>
 
               <div className="botones-proyecto">
-                <button
-                  type="button"
-                  onClick={() => setMostrarAviso(true)}
+                <a
+                  href="https://github.com/pepe907/Backend_natymoon.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="boton-proyecto boton-proyecto-principal"
                 >
                   Ver código
-                </button>
+                </a>
                 <a
                   href="#contacto"
                   className="boton-proyecto boton-proyecto-secundario"
@@ -331,11 +328,9 @@ function App() {
 
                 <div className="tecnologias-proyecto">
                   {proyecto.tecnologias.map((tecnologia) => (
-
                     <span key={tecnologia}>
                       {tecnologia}
                     </span>
-
                   ))}
                 </div>
 
@@ -369,7 +364,6 @@ function App() {
                 Consulta mi formación académica, conocimientos,
                 proyectos y certificaciones.
               </p>
-
             </div>
             <a
               href="/CV-Agustin-Cabezas.pdf"
@@ -418,61 +412,7 @@ function App() {
         </section>
       </main>
 
-      {mostrarAviso && (
-        <div
-          className="notificacion-overlay"
-          onClick={() => setMostrarAviso(false)}
-        >
-          <div
-            className="notificacion"
-            onClick={(evento) => evento.stopPropagation()}
-          >
-            <button
-              type="button"
-              className="notificacion-cerrar"
-              onClick={() => setMostrarAviso(false)}
-              aria-label="Cerrar notificación"
-            >
-              ×
-            </button>
-
-            <div className="notificacion-icono">
-              🔒
-            </div>
-
-            <span className="notificacion-etiqueta">
-              Natymoon
-            </span>
-
-            <h3>
-              Código temporalmente no disponible
-            </h3>
-
-            <p>
-              Este proyecto se encuentra actualmente en desarrollo
-              y preparación para su presentación.
-            </p>
-
-            <p>
-              El código fuente estará disponible próximamente.
-            </p>
-
-            <button
-              type="button"
-              className="boton boton-principal notificacion-boton"
-              onClick={() => setMostrarAviso(false)}
-            >
-              Entendido
-            </button>
-
-          </div>
-
-        </div>
-
-      )}
-
       <footer>
-
         <p>
           © 2026 Agustín Enrique Cabezas Yanguma
         </p>
@@ -484,9 +424,7 @@ function App() {
         >
           GitHub
         </a>
-
       </footer>
-
     </div>
   )
 }
