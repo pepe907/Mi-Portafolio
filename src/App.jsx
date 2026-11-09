@@ -2,36 +2,13 @@ import './App.css'
 
 const proyectos = [
   {
-    nombre: 'Gestor-de-Biblioteca',
+    nombre: 'Gestor de Biblioteca',
     descripcion:
-      'Aplicación para administrar libros mediante operaciones CRUD y estructuras de datos en Spring boot y postgreSQL',
-    tecnologias: ['Spring boot', 'PostgreSQL'],
+      'Aplicación para administrar libros mediante operaciones CRUD y estructuras de datos en Spring Boot y PostgreSQL.',
+    tecnologias: ['Spring Boot', 'PostgreSQL', 'Java'],
+    estado: 'En desarrollo',
     enlace:
       'https://github.com/pepe907/Gestor-de-biblioteca/tree/main/src/main/java/com/Gestor_biblioteca/biblioteca',
-  },
-  {
-    nombre: 'Cuenta Bancaria',
-    descripcion:
-      'Proyecto desarrollado en Java para trabajar con cuentas bancarias y aplicar conceptos de programación orientada a objetos.',
-    tecnologias: ['Java', 'POO'],
-    enlace:
-      'https://github.com/pepe907/Proyectos_java/tree/main/src/CuentaBancaria',
-  },
-  {
-    nombre: 'Sistema de Inventario',
-    descripcion:
-      'Proyecto orientado a la gestión de productos y operaciones básicas de inventario.',
-    tecnologias: ['Java', 'POO'],
-    enlace:
-      'https://github.com/pepe907/Proyectos_java/tree/main/src/Sistema_De_Inventario',
-  },
-  {
-    nombre: 'Veterinaria',
-    descripcion:
-      'Sistema desarrollado en Java para practicar programación orientada a objetos y organización de clases.',
-    tecnologias: ['Java', 'POO'],
-    enlace:
-      'https://github.com/pepe907/Proyectos_java/tree/main/src/Veterinaria',
   },
 ]
 
@@ -42,6 +19,7 @@ function App() {
         <a href="#inicio" className="logo">
           Agustín
         </a>
+
         <nav>
           <a href="#inicio">Inicio</a>
           <a href="#sobre-mi">Sobre mí</a>
@@ -52,16 +30,14 @@ function App() {
       </header>
 
       <main>
+        {/* PRESENTACIÓN */}
         <section id="inicio" className="presentacion">
-          <p className="saludo">
-            Hola, soy
-          </p>
-          <h1>
-            Agustín Enrique Cabezas Yanguma
-          </h1>
-          <h2>
-            Estudiante de Análisis y Desarrollo de Software
-          </h2>
+          <p className="saludo">Hola, soy</p>
+
+          <h1>Agustín Enrique Cabezas Yanguma</h1>
+
+          <h2>Estudiante de Análisis y Desarrollo de Software</h2>
+
           <p className="descripcion">
             En formación en desarrollo backend, con conocimientos en
             Java, Spring Boot, SQL, PostgreSQL y desarrollo de
@@ -96,15 +72,14 @@ function App() {
           </div>
         </section>
 
+        {/* SOBRE MÍ */}
         <section
           id="sobre-mi"
           className="seccion sobre-mi"
         >
           <div className="titulo-seccion">
             <span>01</span>
-            <h2>
-              Sobre mí
-            </h2>
+            <h2>Sobre mí</h2>
           </div>
 
           <div className="sobre-mi-contenido">
@@ -114,11 +89,13 @@ function App() {
                 con formación en programación y enfoque en desarrollo
                 backend.
               </p>
+
               <p>
                 Actualmente estoy fortaleciendo mis conocimientos en
                 Java, Spring Boot, SQL y desarrollo de aplicaciones
                 web.
               </p>
+
               <p>
                 Me interesa seguir desarrollando proyectos prácticos
                 que me permitan mejorar mis habilidades y adquirir
@@ -131,14 +108,17 @@ function App() {
                 <strong>Enfoque</strong>
                 <span>Backend</span>
               </div>
+
               <div>
                 <strong>Lenguaje principal</strong>
                 <span>Java</span>
               </div>
+
               <div>
                 <strong>Base de datos</strong>
                 <span>PostgreSQL</span>
               </div>
+
               <div>
                 <strong>Formación</strong>
                 <span>SENA - ADSO</span>
@@ -147,25 +127,20 @@ function App() {
           </div>
         </section>
 
+        {/* TECNOLOGÍAS */}
         <section
           id="tecnologias"
           className="seccion tecnologias"
         >
           <div className="titulo-seccion">
             <span>02</span>
-            <h2>
-              Tecnologías
-            </h2>
+            <h2>Tecnologías</h2>
           </div>
 
           <div className="tecnologias-grid">
             <article className="tecnologia">
-              <div className="tecnologia-numero">
-                01
-              </div>
-              <h3>
-                Java
-              </h3>
+              <div className="tecnologia-numero">01</div>
+              <h3>Java</h3>
               <p>
                 Programación orientada a objetos, estructuras de datos
                 y desarrollo de aplicaciones.
@@ -173,24 +148,16 @@ function App() {
             </article>
 
             <article className="tecnologia">
-              <div className="tecnologia-numero">
-                02
-              </div>
-              <h3>
-                Spring Boot
-              </h3>
+              <div className="tecnologia-numero">02</div>
+              <h3>Spring Boot</h3>
               <p>
                 Desarrollo de aplicaciones backend y APIs REST.
               </p>
             </article>
 
             <article className="tecnologia">
-              <div className="tecnologia-numero">
-                03
-              </div>
-              <h3>
-                PostgreSQL
-              </h3>
+              <div className="tecnologia-numero">03</div>
+              <h3>PostgreSQL</h3>
               <p>
                 Diseño, relaciones, consultas y manejo de bases de
                 datos relacionales.
@@ -198,36 +165,24 @@ function App() {
             </article>
 
             <article className="tecnologia">
-              <div className="tecnologia-numero">
-                04
-              </div>
-              <h3>
-                React
-              </h3>
+              <div className="tecnologia-numero">04</div>
+              <h3>React</h3>
               <p>
                 Desarrollo de interfaces web mediante componentes.
               </p>
             </article>
 
             <article className="tecnologia">
-              <div className="tecnologia-numero">
-                05
-              </div>
-              <h3>
-                Git & GitHub
-              </h3>
+              <div className="tecnologia-numero">05</div>
+              <h3>Git & GitHub</h3>
               <p>
                 Control de versiones y administración de proyectos.
               </p>
             </article>
 
             <article className="tecnologia">
-              <div className="tecnologia-numero">
-                06
-              </div>
-              <h3>
-                SQL
-              </h3>
+              <div className="tecnologia-numero">06</div>
+              <h3>SQL</h3>
               <p>
                 Consultas, relaciones y operaciones sobre bases de
                 datos.
@@ -236,34 +191,31 @@ function App() {
           </div>
         </section>
 
+        {/* PROYECTOS */}
         <section
           id="proyectos"
           className="seccion proyectos"
         >
           <div className="titulo-seccion">
             <span>03</span>
-            <h2>
-              Proyectos
-            </h2>
+            <h2>Proyectos</h2>
           </div>
 
           <p className="introduccion-proyectos">
-            Algunos de los proyectos que he desarrollado durante mi
-            proceso de formación.
+            Proyectos que estoy desarrollando durante mi proceso
+            de formación.
           </p>
 
+          {/* NATYMOON */}
           <article className="proyecto proyecto-destacado">
             <div className="proyecto-visual">
               <div className="visual-contenido">
                 <span className="visual-etiqueta">
                   Proyecto principal
                 </span>
-                <h3>
-                  Natymoon
-                </h3>
-                <p>
-                  Ecommerce
-                </p>
+
+                <h3>Natymoon</h3>
+                <p>Ecommerce</p>
               </div>
             </div>
 
@@ -271,13 +223,18 @@ function App() {
               <span className="proyecto-numero">
                 01 / PROYECTO PRINCIPAL
               </span>
-              <h3>
-                Natymoon
-              </h3>
+
+              <h3>Natymoon</h3>
+
+              <span className="estado-proyecto">
+                En desarrollo
+              </span>
+
               <p>
                 Proyecto de comercio electrónico desarrollado como
                 aplicación web para la gestión y venta de productos.
               </p>
+
               <p>
                 El proyecto integra un backend desarrollado con
                 Spring Boot, una base de datos PostgreSQL y un
@@ -300,6 +257,7 @@ function App() {
                 >
                   Ver código
                 </a>
+
                 <a
                   href="#contacto"
                   className="boton-proyecto boton-proyecto-secundario"
@@ -310,6 +268,7 @@ function App() {
             </div>
           </article>
 
+          {/* GESTOR DE BIBLIOTECA */}
           <div className="proyectos-grid">
             {proyectos.map((proyecto, index) => (
               <article
@@ -319,12 +278,14 @@ function App() {
                 <div className="proyecto-card-numero">
                   {String(index + 2).padStart(2, '0')}
                 </div>
-                <h3>
-                  {proyecto.nombre}
-                </h3>
-                <p>
-                  {proyecto.descripcion}
-                </p>
+
+                <h3>{proyecto.nombre}</h3>
+
+                <span className="estado-proyecto">
+                  {proyecto.estado}
+                </span>
+
+                <p>{proyecto.descripcion}</p>
 
                 <div className="tecnologias-proyecto">
                   {proyecto.tecnologias.map((tecnologia) => (
@@ -347,24 +308,23 @@ function App() {
           </div>
         </section>
 
+        {/* CURRICULUM */}
         <section className="seccion cv">
           <div className="titulo-seccion">
             <span>04</span>
-            <h2>
-              Curriculum Vitae
-            </h2>
+            <h2>Curriculum Vitae</h2>
           </div>
 
           <div className="cv-contenido">
             <div>
-              <h3>
-                Mi hoja de vida
-              </h3>
+              <h3>Mi hoja de vida</h3>
+
               <p>
                 Consulta mi formación académica, conocimientos,
                 proyectos y certificaciones.
               </p>
             </div>
+
             <a
               href="/CV-Agustin-Cabezas.pdf"
               target="_blank"
@@ -376,16 +336,15 @@ function App() {
           </div>
         </section>
 
+        {/* CONTACTO */}
         <section
           id="contacto"
           className="contacto"
         >
-          <span className="contacto-numero">
-            05
-          </span>
-          <h2>
-            ¿Quieres conocer mis proyectos?
-          </h2>
+          <span className="contacto-numero">05</span>
+
+          <h2>¿Quieres conocer mis proyectos?</h2>
+
           <p>
             Puedes encontrar mi código y proyectos en GitHub.
           </p>
@@ -412,6 +371,7 @@ function App() {
         </section>
       </main>
 
+      {/* FOOTER */}
       <footer>
         <p>
           © 2026 Agustín Enrique Cabezas Yanguma
